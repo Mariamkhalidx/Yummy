@@ -1,0 +1,109 @@
+/*nav*/
+.myNav{
+  background-color: black;
+  color: white;
+  z-index: 99999;
+
+}
+.logo{
+  width: 50px;
+}
+
+body{
+  background-color: black;
+}
+@keyframes moveUp {
+  0% {
+      opacity: 0.7;
+      transform: translateY(20px);
+  }
+  100% {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+/* Applying animation */
+.ancor {
+  text-decoration: none;
+  color: white;
+  opacity: 0;
+  animation: moveUp 2s forwards;
+}
+
+
+
+/*serch*/
+
+.main{
+    background-color: black;
+    position: relative;
+    overflow: hidden;
+}
+
+.show-name{
+ 
+    background-color: #f9f6f6ca;    ;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    top: 0;
+    left: 0;
+    text-align: center;
+    transform: translateY(100%);
+    transition: transform 1s;
+display: flex;
+align-items: center;
+justify-content: start;
+color: black;
+font-size: 40px;
+
+}
+.col-md-3:hover .show-name{
+    transform: translateY(0);
+
+}
+/*category*/
+.show-cat{
+     
+    background-color: #f9f6f6ca;    ;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    top: 0;
+    left: 0;
+    text-align: center;
+    transform: translateY(100%);
+    transition: transform 1s;
+text-align: center;
+color: black;
+}
+.col-md-3:hover .show-cat{
+    transform: translateY(0);
+
+}
+/*details*/
+#mealDetails{
+  color: white;
+}
+#areas{
+  color: white;
+}
+#ingredients{
+  color: white;
+
+}
+#loading {
+  background-color: black;
+  z-index: 99;
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  font-size: 100px;
+  color: white;
+  text-align: center;
+padding-top: 200px;
+}

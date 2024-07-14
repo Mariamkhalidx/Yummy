@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yummy</title>  
+  <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/all.min.css">
+  <link rel="stylesheet" href="css/fontawesome.min.css">
+      <link rel="stylesheet" href="css/bootstrap.min.css">
+      <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+  <!--=navbar-->
+<nav>
+    
+  <div class="myNav min-vh-100 position-fixed d-flex top-0" >
+      <div class="nav-tab  d-flex flex-column justify-content-between min-vh-100 p-4">
+          <div class="links">
+              <ul class="list-unstyled overflow-hidden">
+                  <a href="search.html" onclick= "closeSideNav()" class="py-3 position-relative cursor-pointer ancor" >Search</a>
+                  <br>
+                  <br>
+                  <a href="categories.html" onclick= "closeSideNav()" class="py-3 position-relative cursor-pointer ancor " >Categories</a>
+                  <br>
+                  <br>
+                  <a href="area.html" onclick=" closeSideNav()" class="py-3 position-relative cursor-pointer ancor" >Area</a>
+                  <br>
+                  <br>
+                  <a href="Ingredients.html" onclick=" closeSideNav()" class="py-3 position-relative cursor-pointer ancor" >Ingredients</a>
+                  <br>
+                  <br>
+                  <a href="contact.html" onclick=" closeSideNav()" class="py-3 position-relative cursor-pointer ancor" >Contact Us</a>
+                </ul>
+          </div>
+          <div class="nav-footer">
+              <div class="icons">
+                  <i class="fa-brands fa-facebook"></i>
+                  <i class="fa-brands fa-twitter"></i>
+                  <i class="fa-solid fa-globe"></i>
+              </div>
+              <div class="footer">
+                  <p>Copyright Â© 2019 All Rights <br>Reserved.</p>
+              </div>
+          </div>
+      </div>
+      <div class="nav-header d-flex flex-column justify-content-between py-4 text-center px-2 bg-white text-black">
+          <img class="logo" src="images/logo.png" alt="" >
+          <i class="fa-solid open-close-icon fa-2x fa-align-justify"></i>
+          <div>
+              <i class="fa-solid fa-globe d-block"></i>
+              <i class="fa-solid fa-share-nodes"></i>
+          </div>
+      </div>
+  </div>
+
+</nav> 
+    <div  >
+
+    <div class="container">
+        <div id="loading"> <i class="fas fa-spinner fa-pulse"></i>
+        </div>
+        <div class="row" id="mealDetails">
+
+        </div>
+
+        </div>
+    </div>
+
+    <div  >
+
+
+
+    <script src="js/details.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/index.js"></script>
+</body>
+</html>
