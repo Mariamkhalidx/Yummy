@@ -4,7 +4,7 @@ async function fetchIngredients() {
     const data = await response.json();
     console.log(data)
 
-    return data.meals;
+    return data.meals.slice(0, 20);
 }
 
 // Function to fetch recipes by ingredient
