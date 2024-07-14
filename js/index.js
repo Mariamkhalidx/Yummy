@@ -65,7 +65,7 @@ async function fetchMeals() {
         displayMeals(data.meals);
     } catch (error) {
         console.error('Error fetching meals:', error);
-        document.getElementById('mealContainer').innerHTML = '<p>Error fetching meals. Please try again later.</p>';
+
     } finally {
         // Calculate elapsed time
         const elapsedTime = Date.now() - startTime;
@@ -77,24 +77,28 @@ async function fetchMeals() {
         }, remainingTime);
     }
 }
-async function displayMeals(meals) {
-    const rowData = document.getElementById('rowData');
-        rowData.innerHTML= meals.map(meal => `
-                                    <a href="details.html?id=${meal.idMeal}"
+function displayMeals(arr) {
+    let cartoona = "";
 
-                <div class="col-md-3 m-0 rounded-4 main mb-4">
-                    <div class=" h-100">
-                        <img src="${meal.strMealThumb}" class="card-img-top" alt="${meal.strMeal}">
-<div class="show-name">
-  <h4 >${meal.strMeal}</h4>
+    for (let i = 0; i < arr.length; i++) {
+        cartoona += `
+                                           <a href="details.html?id=${arr[i].idMeal}"
 
-
-</div>
+        <div class="col-md-3">
+                <div  class="meal position-relative overflow-hidden rounded-2 cursor-pointer">
+                    <img class="w-100" src="${arr[i].strMealThumb}" alt="" srcset="">
+                    <div class="meal-layer position-absolute d-flex align-items-center text-black p-2">
+                        <h3>${arr[i].strMeal}</h3>
                     </div>
                 </div>
-                  </a>
-        `).join('');
-    };
+        </div>
+                          </a>
+
+        `
+    }
+
+    rowData.innerHTML = cartoona
+}
     fetchMeals();
 
     function loadingScreen(action) {

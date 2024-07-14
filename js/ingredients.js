@@ -2,6 +2,8 @@
 async function fetchIngredients() {
     const response = await fetch('https://www.themealdb.com/api/json/v1/1/list.php?i=list');
     const data = await response.json();
+    console.log(data)
+
     return data.meals;
 }
 
@@ -24,6 +26,7 @@ async function displayIngredients() {
                     <div class=" h-100">
 <i class="fa-solid fa-drumstick-bite fa-4x"></i>
   <h3 >${ingredient.strIngredient}</h3>
+                        <p>${ingredient.strDescription?.split(" ").slice(0,20).join(" ")}</p>
 
                     </div>            </div>   
     `).join('');
